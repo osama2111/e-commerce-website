@@ -13,56 +13,56 @@ const Productdata = [
         id: 1,
         name: "Wireless Headphones",
         price: "$99.99",
-        image: "image1",
+        image: image1,
         link: "/product/wireless-headphones"
     },
     {
         id: 2,
         name: "Smart Watch",
         price: "$199.99",
-        image: "image2",
+        image: image2,
         link: "/product/smart-watch"
     },
     {
         id: 3,
         name: "Gaming Console",
         price: "$299.99",
-        image: "image3",
+        image: image3,
         link: "/product/gaming-console"
     },
     {
         id: 4,
         name: "Bluetooth Speaker",
         price: "$49.99",
-        image: "image4",
+        image: image4,
         link: "/product/bluetooth-speaker"
     },
     {
         id: 5,
         name: "4K Action Camera",
         price: "$149.99",
-        image: "image5",
+        image: image5,
         link: "/product/4k-action-camera"
     },
     {
         id: 6,
         name: "VR Headset",
         price: "$399.99",
-        image: "image6",
+        image: image6,
         link: "/product/vr-headset"
     },
     {
         id: 7,
         name: "Wireless Earbuds",
         price: "$79.99",
-        image: "image7",
+        image: image7,
         link: "/product/wireless-earbuds"
     }
     ,{
         id: 8,
         name: "Portable Charger",
         price: "$29.99",
-        image: "image8",
+        image: image8,
         link: "/product/portable-charger"
     }
     
@@ -83,7 +83,7 @@ export const Product = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4 lg:px-8 xl:px-12">
             {Productdata.map((product,index) => (
                 <div data-aos="fade-up" data-aos-duration={(index + 1) * 250} data-aos-delay="100" data-aos-once="false" key={product.id} className="relative rounded-lg shadow-md hover:shadow-lg transition p-4 flex flex-col items-center group">
-                    <img src={eval(product.image)} alt={product.name} className="w-70 h-70 object-cover mb-4 group-hover:blur duration-300 ease-in-out" />
+                    <img src={(product.image)} alt={product.name} className="w-70 h-70 object-cover mb-4 group-hover:blur duration-300 ease-in-out" />
                     <h3 className="text-lg font-semibold mb-2">{product.name}</h3>
                     <p className="text-gray-500 mb-4">{product.price}</p>
                     {/* product.hover */}
